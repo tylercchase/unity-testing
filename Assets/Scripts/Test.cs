@@ -25,21 +25,9 @@ public class Test : MonoBehaviour
         // transform.Translate(0, Time.deltaTime, 0, Space.World);
         if (m_Collider.bounds.Intersects(m_Collider2.bounds))
         {
-            Debug.Log("Bounds intersecting");
-            // Debug.Log(transform.position);
-            // Debug.Log(m_NewObject.transform.position);
-            // Center of plane is in the middle so it ranges from -5 to 5 for each axis
-            // XYZ
-            // Only care about XY
-            // Z could be good to get a scale factor?
             Vector3 relativeIntersection = (transform.position - m_NewObject.transform.position);
             Debug.Log(relativeIntersection);
-            // Range from -5 to 5
-            // decimal of .1
-            // 5 / .1 * 2 = 
 
-            // take number + 5
-            // Test -0.7, -1.2
             int xIndex = (int)(relativeIntersection.x + 5 * 10);
             int yIndex = (int)(relativeIntersection.y + 5 * 10);
 
